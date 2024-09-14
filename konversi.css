@@ -1,0 +1,567 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  border: none;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+/* reset */
+
+/* konversi */
+.loading {
+  width: 0%;
+  background-color: purple;
+  height: 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+header::before,
+header::after {
+  position: absolute;
+  content: "";
+  width: 13%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.342);
+  top: 0;
+}
+
+header::before {
+  left: 0;
+  border-radius: 0 3rem 0 0;
+}
+header::after {
+  right: 0;
+  border-radius: 0 0 0 3rem;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    0deg,
+    rgb(199, 0, 183),
+    rgb(159, 0, 146),
+    rgb(159, 0, 146),
+    rgb(199, 0, 183)
+  );
+  padding: 1rem;
+  border-radius: 0 0 50rem 50rem;
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.7);
+  margin-bottom: 2rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  li {
+    list-style: none;
+    z-index: 99999;
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: rgb(209, 42, 255);
+      padding: 0.3rem;
+      border-radius: 0.3rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      box-shadow: 0 0 5px white;
+      transition: 0.5s;
+    }
+    a:hover {
+      background-color: rgba(254, 0, 182, 0.756);
+    }
+  }
+}
+
+.container::after,
+.container::before {
+  position: absolute;
+  content: "";
+  width: 7rem;
+  height: 6rem;
+  background-color: rgba(255, 255, 255, 0.306);
+  z-index: 1;
+}
+
+.container::before {
+  left: 0;
+  top: 0;
+  border-radius: 0 0 5rem 0;
+}
+.container::after {
+  right: 0;
+  bottom: 0;
+  border-radius: 5rem 0 0 0;
+}
+
+.sisi {
+  position: absolute;
+  width: 4rem;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.352);
+  top: 25%;
+  z-index: 1;
+}
+
+.sisi.kiri {
+  left: 0;
+  border-radius: 0 50rem 50rem 0;
+}
+
+.sisi.kanan {
+  right: 0;
+  border-radius: 50rem 0 0 50rem;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  margin: auto auto 1rem auto;
+  overflow: hidden;
+  padding: 20px;
+  background: linear-gradient(
+    0deg,
+    rgb(199, 0, 183),
+    rgb(135, 0, 124),
+    rgb(135, 0, 124),
+    rgb(199, 0, 183)
+  );
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.7);
+  border-radius: 0.8rem;
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 15rem;
+    margin-bottom: -1rem;
+    align-self: center;
+    margin-top: -1rem;
+    z-index: 9999999;
+  }
+}
+
+#ipkForm {
+  z-index: 9999999;
+}
+
+h1 {
+  text-align: center;
+  z-index: 9999999;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  z-index: 9999999;
+  font-size: 1.5rem;
+  background-color: rgb(211, 0, 95);
+  border-radius: 0.3rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+select option:hover {
+  background-color: rgb(255, 0, 255);
+}
+
+select option:checked {
+  background-color: rgb(255, 0, 255); /* Background hijau saat dipilih */
+}
+
+select:focus {
+  background-color: purple;
+  color: white;
+}
+
+input:focus {
+  outline: solid rgb(103, 0, 81);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(
+    0deg,
+    rgb(255, 6, 188),
+    rgb(217, 0, 159),
+    rgb(217, 0, 159),
+    rgb(255, 6, 188)
+  );
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 9px rgba(255, 255, 255, 0.393);
+  transition: 0.4s;
+  font-weight: 500;
+  z-index: 9999999;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: linear-gradient(
+    0deg,
+    rgb(255, 101, 214),
+    rgb(255, 68, 205),
+    rgb(255, 68, 205),
+    rgb(255, 101, 214)
+  );
+  color: rgb(86, 0, 86);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  z-index: 99999999;
+}
+
+th,
+td {
+  padding: 10px 5px;
+  text-align: center;
+  border-bottom: 4px solid #ddd;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+th {
+  background-color: rgb(209, 0, 209);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: yellow;
+}
+
+th:first-child {
+  border-radius: 0.5rem 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 0.5rem 0 0;
+}
+
+#hasilIPK {
+  margin-top: 20px;
+  font-size: 18px;
+  z-index: 9999999;
+  p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    line-height: 3rem;
+  }
+}
+
+.ipk-result {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.ipk-tinggi {
+  color: rgb(34, 255, 0);
+}
+
+.ipk-sedang {
+  color: yellow;
+}
+
+.ipk-rendah {
+  color: red;
+}
+
+#mataKuliahFields {
+  z-index: 99999;
+}
+
+fieldset {
+  border: 2px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+  font-size: 1rem;
+}
+
+.error {
+  color: #dc3545;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.peringatan {
+  background-color: red;
+  display: inline-block;
+  z-index: 9999999999999;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 0 0 0 3rem;
+  font-weight: 500;
+  transform: translateX(150%);
+  animation: peringatan 1.5s linear infinite;
+  transition: 0.5s ease-out;
+  color: white;
+  font-size: 1rem;
+}
+
+.peringatan.active {
+  transform: translateX(0);
+}
+
+@keyframes peringatan {
+  0% {
+    box-shadow: 0 0 0 white;
+  }
+  50% {
+    box-shadow: 0 0 9px 1px white;
+  }
+  100% {
+    box-shadow: 0 0 0 white;
+  }
+}
+/* elearning */
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.7rem;
+  }
+
+  label,
+  button,
+  input[type="text"],
+  input[type="number"],
+  select,
+  legend,
+  td,
+  .peringatan {
+    font-size: 0.9rem;
+  }
+
+  th,
+  #hasilIPK p {
+    font-size: 1rem;
+  }
+
+  .ipk-result {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.6rem;
+  }
+
+  label,
+  button,
+  input[type="text"],
+  input[type="number"],
+  select,
+  legend,
+  td,
+  .peringatan {
+    font-size: 0.8rem;
+  }
+
+  th {
+    font-size: 0.8rem;
+  }
+
+  #hasilIPK p {
+    font-size: 0.9rem;
+  }
+
+  .ipk-result {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.5rem;
+  }
+
+  label,
+  button,
+  input[type="text"],
+  input[type="number"],
+  select,
+  legend,
+  td,
+  .peringatan {
+    font-size: 0.7rem;
+  }
+
+  th {
+    font-size: 0.7rem;
+  }
+
+  #hasilIPK p {
+    font-size: 0.8rem;
+  }
+
+  .ipk-result {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.4rem;
+  }
+
+  label,
+  button,
+  input[type="text"],
+  input[type="number"],
+  select,
+  legend,
+  td,
+  .peringatan {
+    font-size: 0.6rem;
+  }
+
+  th {
+    font-size: 0.6rem;
+  }
+
+  #hasilIPK p {
+    font-size: 0.7rem;
+  }
+
+  .ipk-result {
+    font-size: 1rem;
+  }
+}
