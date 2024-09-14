@@ -169,7 +169,7 @@ html {
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom: 20%;
+    bottom: 15%;
     gap: 1rem;
     background-color: rgba(255, 255, 255, 0.347);
     -webkit-backdrop-filter: blur(5px);
@@ -410,6 +410,10 @@ footer {
 }
 
 @media screen and (max-width: 470px) {
+  .wadah.satu form {
+    bottom: 10%;
+  }
+
   .wadah.satu h1,
   .wadah.dua h1 {
     font-size: 1.7rem;
@@ -496,6 +500,7 @@ footer {
   }
 
   .wadah.satu form {
-    bottom: 10%;
+    bottom: 5%;
   }
+
 }
