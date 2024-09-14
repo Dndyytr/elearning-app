@@ -104,10 +104,10 @@ header {
   overflow: hidden;
   background: linear-gradient(
     0deg,
-    rgb(199, 0, 183),
-    rgb(159, 0, 146),
-    rgb(159, 0, 146),
-    rgb(199, 0, 183)
+    rgb(207, 0, 190),
+    rgb(166, 0, 152),
+    rgb(166, 0, 152),
+    rgb(207, 0, 190)
   );
   padding: 1rem;
   border-radius: 0 0 50rem 50rem;
@@ -183,10 +183,10 @@ header nav ul {
   position: relative;
   background: linear-gradient(
     0deg,
-    rgb(199, 0, 183),
-    rgb(135, 0, 124),
-    rgb(135, 0, 124),
-    rgb(199, 0, 183)
+    rgb(207, 0, 190),
+    rgb(166, 0, 152),
+    rgb(166, 0, 152),
+    rgb(207, 0, 190)
   );
   width: 97%;
   margin: 2rem auto 1.2rem auto;

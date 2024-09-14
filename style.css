@@ -227,10 +227,10 @@ html {
   width: 90%;
   background: linear-gradient(
     0deg,
-    rgb(199, 0, 183),
-    rgb(135, 0, 124),
-    rgb(135, 0, 124),
-    rgb(199, 0, 183)
+    rgb(207, 0, 190),
+    rgb(166, 0, 152),
+    rgb(166, 0, 152),
+    rgb(207, 0, 190)
   );
   margin: auto;
   position: relative;
@@ -343,10 +343,10 @@ footer {
   z-index: 1;
   background: linear-gradient(
     0deg,
-    rgb(199, 0, 183),
-    rgb(159, 0, 145),
-    rgb(159, 0, 145),
-    rgb(199, 0, 183)
+    rgb(207, 0, 190),
+    rgb(166, 0, 152),
+    rgb(166, 0, 152),
+    rgb(207, 0, 190)
   );
   text-align: center;
   border-radius: 50rem 50rem 0 0;
@@ -502,5 +502,4 @@ footer {
   .wadah.satu form {
     bottom: 5%;
   }
-
 }
