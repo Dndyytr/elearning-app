@@ -23,18 +23,17 @@ function loading() {
 
 // Waktu logout otomatis dalam milidetik (24 jam = 24 * 60 * 60 * 1000 milidetik)
 const logoutTime = 24 * 60 * 60 * 1000; // 24 jam
-const currentTime = new Date().getTime();
 
 // Fungsi untuk menghitung waktu login
 function checkLoginTime() {
   const loginTimestamp = localStorage.getItem("loginTimestamp");
 
   if (loginTimestamp) {
+    const currentTime = new Date().getTime();
     const timeElapsed = currentTime - loginTimestamp;
 
     if (timeElapsed > logoutTime) {
       document.getElementById("home").click();
-      alert("sesi habis");
     }
   }
 }
